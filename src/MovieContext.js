@@ -1,8 +1,9 @@
-import React, {createContext} from 'react'
+import React, { useState, createContext} from 'react'
 
-const MovieContent = createContext()
+export const MovieContent = createContext()
 
-function movieContext() {
+export function MovieProvider(props) {
+
     const [movies, setMovies] = useState([
         {
             id: 1,
@@ -26,10 +27,9 @@ function movieContext() {
         },
     ])
     return (
-        <div>
-            
-        </div>
+        <MovieContent.Provider value={[movies, setMovies]}>
+            {props.children}
+        </MovieContent.Provider>
     )
 }
 
-export default movieContext

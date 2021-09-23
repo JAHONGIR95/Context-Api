@@ -5,6 +5,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
+}
+
+form{
+    margin-right: 50px;
 }
 
 ul{
